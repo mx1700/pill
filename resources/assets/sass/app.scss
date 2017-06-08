@@ -1,9 +1,51 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+//@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
-@import "variables";
+//@import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// 1. Import the initial variables
+@import "node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update blue
+$body-size: 14px;
+$size-7: 0.85rem;
+$blue: #72d0eb;
+  // Add pink and its invert
+$pink: #ff0033;
+$pink-invert: #fff;
+  // Add a serif family
+$family-serif: "Merriweather", "Georgia", serif;
+
+  // 3. Set the derived variables
+  // Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+  // Use the existing orange as the danger color
+$danger: $orange;
+  // Use the new serif family
+$family-primary: $family-serif;
+
+  // 4. Import the rest of Bulma
+@import "node_modules/bulma/bulma";
+
+.input, .textarea {
+  box-shadow: none;
+}
+
+.label {
+  font-weight: normal;
+}
+
+.section {
+  padding: 1.8rem 1.5rem
+}
+
+h1.title {
+  font-size: 1.7rem;
+}
