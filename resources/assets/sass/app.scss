@@ -34,8 +34,19 @@ $family-primary: $family-serif;
   // 4. Import the rest of Bulma
 @import "node_modules/bulma/bulma";
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 .input, .textarea {
   box-shadow: none;
+  height: 2.6rem;
+}
+
+.button {
+  height: 2.6rem;
 }
 
 .label {

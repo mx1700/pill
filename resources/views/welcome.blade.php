@@ -8,6 +8,7 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="/css/app.css" rel="stylesheet" type="text/css">
     <!-- Styles -->
     <style>
@@ -19,10 +20,13 @@
     <div class="container" style="max-width: 950px">
         <div class="nav-left">
             <a class="nav-item">
-                <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+                <span class="icon is-medium">
+                  <i class="fa fa-toggle-off" style="color: #ff0033;"></i>
+                </span>
+                <h1 style="font-size: 1.5rem; color: #000; margin: 0 1rem 0 0.5rem;">时间胶囊</h1>
+                {{--<img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">--}}
             </a>
-            <a class="nav-item is-tab is-hidden-mobile is-active">首页</a>
-            <a class="nav-item is-tab is-hidden-mobile">添加</a>
+            <a class="nav-item is-tab is-hidden-mobile is-active">添加</a>
             <a class="nav-item is-tab is-hidden-mobile">打开</a>
         </div>
         <span class="nav-toggle">
@@ -41,40 +45,37 @@
 </nav>
 <div class="section">
     <div class="container" style="max-width: 860px">
-        <h1 class="title">添加胶囊</h1>
+        {{--<h1 class="title">添加胶囊</h1>--}}
         <form style="max-width: 580px">
             <div class="field">
                 <p class="control">
-                    <input class="input" style="max-width: 240px" type="text" placeholder="你的名字">
+                    <input class="input" style="max-width: 280px" type="text" placeholder="你的名字">
                 </p>
             </div>
             <div class="field">
                 <p class="control">
-                    <input class="input"  style="max-width: 240px" type="text" placeholder="你的邮箱">
+                    <input class="input"  style="max-width: 280px" type="text" placeholder="你的邮箱">
+                </p>
+            </div>
+            <div class="field">
+                <label class="label">打开时间</label>
+                <p class="control">
+                    <input class="input" style="max-width: 280px" type="datetime-local" placeholder="打开时间">
+                </p>
+                {{--<p class="help">打开时间之前，胶囊内容是看不到的。</p>--}}
+            </div>
+            <div class="field">
+                <p class="control">
+                    <textarea class="textarea" style="min-height: 160px" placeholder="打开之后能看到的内容"></textarea>
                 </p>
             </div>
             <div class="field">
                 <p class="control">
-                    <input class="input" style="max-width: 240px" type="text" placeholder="打开时间">
+                    <textarea class="textarea" style="min-height: 80px" placeholder="未到时间打开的提示信息"></textarea>
                 </p>
-                <p class="help">打开时间之前，胶囊内容是看不到的。</p>
             </div>
-            <div class="field">
-                <p class="control">
-                    <textarea class="textarea" placeholder="胶囊内容"></textarea>
-                </p>
-                <p class="help">胶囊内容不能超过5000字。</p>
-            </div>
-            <div class="field">
-                <p class="control">
-                    <textarea class="textarea" placeholder="未到期的提示信息"></textarea>
-                </p>
-                <p class="help">打开时间 之前尝试打开胶囊，会看到提示信息。</p>
-            </div>
-            <div class="field is-grouped">
-                <p class="control">
-                    <button class="button is-primary">添加胶囊</button>
-                </p>
+            <div class="field is-inline-block-tablet" style="text-align: center">
+                <button class="button is-primary is-medium is-fullwidth">添加胶囊</button>
             </div>
         </form>
 
